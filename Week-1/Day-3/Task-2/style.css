@@ -1,0 +1,37 @@
+/* General Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #004b8d;
+  color: white;
+  padding: 15px 0;
+}
+
+/* Gallery Styling */
+.gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-gallery {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 20px;
+}
+
+.grid-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.grid-gallery img:hover {
+  transform: scale(1.05);
+}
