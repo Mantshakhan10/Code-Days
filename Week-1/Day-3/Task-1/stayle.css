@@ -1,0 +1,42 @@
+/* General Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #004b8d;
+  color: white;
+  padding: 15px 0;
+}
+
+/* Flexbox Layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.flex-box {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  flex: 1 1 300px;
+  min-width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
