@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Buttons Task</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Interactive Text Styling</h2>
+
+  <p id="myText">Hey, I’m Mantsha. I create work that reflects who I am and what I stand for.</p>
+
+  <br><br>
+
+  <!-- Color Buttons -->
+  <button onclick="changeColor('red')">RED</button>
+  <button onclick="changeColor('green')">GREEN</button>
+  <button onclick="changeColor('blue')">BLUE</button>
+
+  <br><br>
+
+  <!-- Font Family Dropdown -->
+  <select id="fontSelect" onchange="changeFont()">
+    <option value="Arial">Arial</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Courier New">Courier New</option>
+    <option value="Times New Roman">Times New Roman</option>
+  </select>
+
+  <br><br>
+
+  <!-- Font Size Buttons -->
+  <button onclick="increaseSize()">A+</button>
+  <button onclick="decreaseSize()">A-</button>
+
+  <br><br>
+
+  <!-- Font Style on Mouseover -->
+  <button class="style-btn" onmouseover="boldText()" onmouseout="normalStyle()">Bold</button>
+  <button class="style-btn" onmouseover="italicText()" onmouseout="normalStyle()">Italic</button>
+  <button class="style-btn" onmouseover="underlineText()" onmouseout="normalStyle()">Underline</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
