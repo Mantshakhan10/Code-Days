@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display User Name Dynamically</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #004b8d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="welcomeText"></h1>
+
+  <script>
+    // Ask user for their name when page loads
+    let userName = prompt("Enter your name:");
+
+    // Check if user typed something
+    if (userName && userName.trim() !== "") {
+      document.getElementById("welcomeText").textContent = `Welcome, ${userName}!`;
+    } else {
+      document.getElementById("welcomeText").textContent = "Welcome, Guest!";
+    }
+  </script>
+
+</body>
+</html>
