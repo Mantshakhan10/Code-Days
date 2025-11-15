@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mantsha Khan — Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta for best practices -->
+  <meta name="description" content="Personal portfolio of Mantsha Khan — web developer student. Projects, skills and contact." />
+</head>
+<body>
+
+  <!-- SITE HEADER: logo/name and navigation -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#home" class="logo">Mantsha<span class="dot">.</span></a>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme toggle (bonus) -->
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button id="menuToggle" class="mobile-menu-btn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" role="main">
+
+    <!-- HERO / WELCOME -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hello, I’m <strong>Mantsha Khan</strong></h1>
+          <p class="lead">BCA student • Web developer in progress • Passionate about building simple, accessible interfaces.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- Replace with your photo -->
+          <img src="https://via.placeholder.com/320x320" alt="Mantsha Khan portrait">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about">
+      <div class="container section-inner">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I'm <strong>Mantsha Khan</strong>, a tech student studying BCA at Dr. C. V. Raman University. I enjoy creating user-centered websites using HTML, CSS and JavaScript. I focus on learning fundamentals, responsive layouts, and writing clean, accessible code.</p>
+            <p>I’m motivated by curiosity and enjoy solving problems, experimenting with UI, and improving my coding skills every day.</p>
+          </div>
+
+          <aside class="profile-card" aria-label="Profile">
+            <img class="profile-photo" src="https://via.placeholder.com/220" alt="Profile photo of Mantsha Khan">
+            <ul class="profile-list">
+              <li><strong>Location:</strong> Sanawad, Madhya Pradesh</li>
+              <li><strong>Education:</strong> BCA (in progress)</li>
+              <li><strong>Languages:</strong> Hindi, English</li>
+              <li><strong>Interests:</strong> Web Dev, AI, Editing, Fitness</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills">
+      <div class="container section-inner">
+        <h2 class="section-title">Skills</h2>
+
+        <!-- Grid of skill cards -->
+        <div class="skills-grid" aria-hidden="false">
+          <div class="skill-card">
+            <h3>HTML &amp; CSS</h3>
+            <p>Semantic markup, responsive design, Flexbox & Grid.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>DOM manipulation, events, basic ES6 features.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Frontend Tools</h3>
+            <p>Git, basic tooling, and debugging workflows.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Problem Solving</h3>
+            <p>Algorithmic thinking, learning new languages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects">
+      <div class="container section-inner">
+        <h2 class="section-title">Projects</h2>
+
+        <!-- Projects grid (thumbnails + short description) -->
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="https://via.placeholder.com/400x240" alt="Project thumbnail">
+            <div class="project-body">
+              <h3>Portfolio Landing Page</h3>
+              <p>Responsive landing page built with HTML, CSS and JS (this project).</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="https://via.placeholder.com/400x240" alt="Project thumbnail">
+            <div class="project-body">
+              <h3>Mini Web App</h3>
+              <p>Small interactive app showcasing DOM interactivity and forms.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="https://via.placeholder.com/400x240" alt="Project thumbnail">
+            <div class="project-body">
+              <h3>Design Experiments</h3>
+              <p>UI experiments exploring layout, color and micro-interactions.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact">
+      <div class="container section-inner">
+        <h2 class="section-title">Contact</h2>
+
+        <!-- Contact form: JS will validate and show alert -->
+        <form id="contactForm" class="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help?"></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Send Message</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+
+          <p id="formAlert" class="form-alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Mantsha Khan · Built with semantic HTML, CSS &amp; JavaScript</p>
+      <p class="socials">
+        <!-- Placeholder social icons (replace with real links) -->
+        <a href="#" aria-label="LinkedIn">LinkedIn</a> ·
+        <a href="#" aria-label="GitHub">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

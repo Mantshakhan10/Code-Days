@@ -1,0 +1,161 @@
+/* ---------------------------------------------------------
+   style.css — Portfolio landing page
+   - Uses CSS variables for easy theming
+   - Flexbox + Grid for layout
+   - Responsive breakpoints included
+   --------------------------------------------------------- */
+
+/* Theme variables (light by default) */
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #1b1f23;
+  --muted: #6b7280;
+  --accent: #004b8d;
+  --accent-2: #0073e6;
+  --radius: 12px;
+  --container: 1100px;
+  --gap: 20px;
+  --transition: 200ms ease;
+  font-size: 16px;
+}
+
+[data-theme="dark"]{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --text: #eef2ff;
+  --muted: #9aa4b2;
+  --accent: #6da8ff;
+  --accent-2: #58a6ff;
+}
+
+/* Basic reset */
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* Container helper */
+.container{
+  width: calc(100% - 40px);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header{
+  position: sticky;
+  top:0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  z-index: 50;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--gap);
+  padding:14px 0;
+}
+
+.brand .logo{
+  font-weight:700;
+  color:var(--accent);
+  font-size:1.2rem;
+  text-decoration:none;
+}
+
+.brand .dot{ color:var(--accent-2) }
+
+/* Navigation */
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px;align-items:center}
+.main-nav a{
+  text-decoration:none;color:var(--muted);font-weight:600;padding:8px;border-radius:8px;
+  transition: color var(--transition), background var(--transition);
+}
+.main-nav a:hover{color:var(--accent);background:transparent}
+
+/* Header actions */
+.header-actions{display:flex;align-items:center;gap:10px}
+#themeToggle{
+  background:transparent;border:1px solid rgba(0,0,0,0.06);padding:6px 10px;border-radius:8px;cursor:pointer;
+}
+.mobile-menu-btn{display:none}
+
+/* HERO */
+.hero{
+  padding:54px 0;
+}
+.hero-inner{display:flex;gap:40px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.hero-text{flex:1;min-width:260px}
+.hero-text h1{font-size:2.1rem;margin:0 0 12px}
+.lead{color:var(--muted);margin:0 0 18px}
+.hero-image img{width:320px;border-radius:18px;box-shadow:0 10px 30px rgba(2,6,23,0.08)}
+
+/* Sections */
+.section{padding:36px 0}
+.section-title{font-size:1.25rem;margin:0 0 18px;color:var(--accent)}
+.section-inner{background:transparent}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.profile-card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+.profile-photo{width:100%;border-radius:10px;display:block;margin-bottom:12px}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.skill-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 16px rgba(2,6,23,0.06);transition:transform var(--transition)}
+.skill-card:hover{transform:translateY(-6px)}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.project-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.06);transition:transform var(--transition)}
+.project-card img{width:100%;display:block}
+.project-body{padding:14px}
+
+/* Contact form */
+.contact-form{max-width:720px;margin:0 auto;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+.contact-form label{display:block;margin-top:12px;font-weight:600;color:var(--muted)}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:transparent;color:var(--text);
+}
+.form-actions{display:flex;gap:12px;margin-top:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--accent)}
+
+/* Form alert */
+.form-alert{margin-top:12px;color:#b91c1c;font-weight:600}
+
+/* Footer */
+.site-footer{padding:24px 0;border-top:1px solid rgba(0,0,0,0.06);color:var(--muted);text-align:center}
+.site-footer a{color:var(--muted);text-decoration:none}
+
+/* SMALL SCREENS */
+@media (max-width: 900px){
+  .about-grid{grid-template-columns:1fr}
+  .hero-image img{width:260px}
+  .hero-text h1{font-size:1.75rem}
+}
+
+/* MOBILE */
+@media (max-width: 700px){
+  .hero-inner{flex-direction:column-reverse;align-items:center}
+  .main-nav{display:none}
+  .mobile-menu-btn{display:inline-block}
+  .hero-image img{width:200px}
+  .container{width:calc(100% - 32px)}
+}
+
+/* small micro-interactions */
+a,button,input,textarea{transition:all 180ms ease}
