@@ -22,7 +22,7 @@ This mini project is a complete landing page with the following sections:
 ### 1. Semantic HTML Structure
 - Use meaningful tags like `<header>`, `<main>`, `<section>`, and `<footer>`  
 - Follow clean indentation and readable class names  
-- Add comments to explain major parts of the code  
+- Add comments to explain major parts of the code
 
 ### 2. Responsive Design
 - Page should adapt smoothly across mobile, tablet, and desktop  
