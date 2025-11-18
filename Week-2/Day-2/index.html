@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Tasks Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>ES6 Practice Tasks</h1>
+
+    <!-- Task 1 -->
+    <div class="task">
+        <h2>Task 1 – Data Transformation with map() and filter()</h2>
+
+        <p class="question">
+            Q1: Given <code>[120, 250, 300, 450, 600]</code><br>
+            • Filter prices greater than 250<br>
+            • Apply 10% discount using map()<br>
+            • Log both original and discounted arrays
+        </p>
+
+        <button onclick="runTask1()">Run Task 1</button>
+        <p id="task1-output"></p>
+    </div>
+
+    <!-- Task 2 -->
+    <div class="task">
+        <h2>Task 2 – Calculate Total Expense with reduce()</h2>
+
+        <p class="question">
+            Q2: Given expenses:<br>
+            {Food: 300}, {Transport: 150}, {Shopping: 400}<br>
+            • Use reduce() to calculate total<br>
+            • Output: “Total Expense: ₹850”
+        </p>
+
+        <button onclick="runTask2()">Run Task 2</button>
+        <p id="task2-output"></p>
+    </div>
+
+    <!-- Task 3 -->
+    <div class="task">
+        <h2>Task 3 – Combine map(), filter(), reduce()</h2>
+
+        <p class="question">
+            Q3: Given scores <code>[45, 80, 90, 35, 60, 75]</code><br>
+            • Filter passing scores (>= 50)<br>
+            • Add 10 bonus marks to each<br>
+            • Calculate total using reduce()
+        </p>
+
+        <button onclick="runTask3()">Run Task 3</button>
+        <p id="task3-output"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
