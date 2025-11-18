@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ES6 Practice — Demo</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      font-family: 'Poppins', sans-serif;
+      background:#f6f8fb;
+      margin:0;
+      padding:40px;
+      color:#111827;
+      display:flex;
+      justify-content:center;
+    }
+    .card{
+      width:100%;
+      max-width:900px;
+      background:#fff;
+      padding:20px 24px;
+      border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,0.06);
+    }
+    h1{margin:0 0 12px;font-size:20px;color:#0b3b66}
+    pre{
+      background:#0f1724;
+      color:#e6f0ff;
+      padding:14px;
+      border-radius:8px;
+      overflow:auto;
+      white-space:pre-wrap;
+      font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      font-size:14px;
+      line-height:1.5;
+    }
+    .controls{margin:14px 0;display:flex;gap:8px;flex-wrap:wrap}
+    button{padding:8px 12px;border-radius:8px;border:0;background:#004b8d;color:white;cursor:pointer}
+    button.secondary{background:#6b7280}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>ES6 Practice Demo</h1>
+
+    <p>This page runs an ES6 demo and prints the results below.</p>
+
+    <div class="controls">
+      <button id="runBtn">Run Demo</button>
+      <button id="clearBtn" class="secondary">Clear Output</button>
+    </div>
+
+    <pre id="output" aria-live="polite"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
