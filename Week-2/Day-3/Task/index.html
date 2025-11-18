@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JavaScript Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Week 2 – Day 3: Async JavaScript Tasks</h1>
+
+    <!-- Task 1 -->
+    <div class="task">
+        <h2>Task 1 – Simulate API Call with setTimeout</h2>
+        <p class="question">
+            • Show “Fetching user details…”  
+            • After 2 sec → “User data received”  
+            • Extension: After 1.5 sec → “Processing data…”
+        </p>
+        <button onclick="runTask1()">Run Task 1</button>
+        <div id="task1-output" class="output"></div>
+    </div>
+
+    <!-- Task 2 -->
+    <div class="task">
+        <h2>Task 2 – Promise Example</h2>
+        <p class="question">
+            • Use Promise to simulate network request  
+            • Resolve if online, reject if offline  
+        </p>
+        <button onclick="runTask2()">Run Task 2</button>
+        <div id="task2-output" class="output"></div>
+    </div>
+
+    <!-- Task 3 -->
+    <div class="task">
+        <h2>Task 3 – Async/Await with Fetch API</h2>
+        <p class="question">
+            • Fetch 5 latest posts from API  
+            • Display results on page  
+        </p>
+        <button onclick="runTask3()">Run Task 3</button>
+        <div id="task3-output" class="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
