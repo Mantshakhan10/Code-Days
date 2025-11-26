@@ -2,6 +2,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Greeting from "./components/Greeting";
 import ProfileCard from "./components/ProfileCard";
+import "./App.css";
+import Counter from "./components/Counter";
+import UserForm from "./components/UserForm";
 
 function App() {
     
@@ -31,12 +34,15 @@ function App() {
         <>
             <Header />
             <Footer />
-
+            <UserForm />
             <div>
                 <Greeting />
                 <Greeting name="Priya" topic="React Components" />
                 <Greeting name="Rohan" topic="JSX & Props" />
             </div>
+              <div>
+            <Counter />
+        </div>
 
             {/* Rendering Profile Cards using .map() */}
             <div style={{ display: "flex", justifyContent: "center" }}>
