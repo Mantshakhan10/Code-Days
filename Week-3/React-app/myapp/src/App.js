@@ -5,6 +5,8 @@ import ProfileCard from "./components/ProfileCard";
 import "./App.css";
 import Counter from "./components/Counter";
 import UserForm from "./components/UserForm";
+import UserList from "./UserList";
+import Posts from "./Posts";    
 
 function App() {
     
@@ -35,13 +37,16 @@ function App() {
             <Header />
             <Footer />
             <UserForm />
+            <Counter />
+            <UserList />
+            <Posts />
             <div>
                 <Greeting />
                 <Greeting name="Priya" topic="React Components" />
                 <Greeting name="Rohan" topic="JSX & Props" />
             </div>
               <div>
-            <Counter />
+            
         </div>
 
             {/* Rendering Profile Cards using .map() */}
