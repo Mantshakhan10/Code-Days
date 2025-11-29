@@ -1,23 +1,38 @@
+/* Light / Dark background for whole app */
+.app.light {
+  background: #ffffff;
+  color: #000;
+  min-height: 100vh;
+}
+
+.app.dark {
+  background: #1f1f1f;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navbar base style */
 .nav {
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+}
+
+/* Navbar light/dark look */
+.nav.light {
   background: #f5f5f5;
   border-bottom: 1px solid #ddd;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: 700;
+.nav.dark {
+  background: #111827;
+  border-bottom: 1px solid #1f2933;
 }
 
-.links {
-  display: flex;
-  gap: 12px;
-}
-
+/* Links */
 .link {
+  margin-right: 15px;
   text-decoration: none;
   font-size: 16px;
   color: black;
@@ -29,21 +44,18 @@
   border-bottom: 2px solid blue;
 }
 
-/* Simple mobile tweak */
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+/* Dark mode me link color white karna ho to: */
+.nav.dark .link {
+  color: #e5e7eb;
 }
+.nav.dark .link.active {
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
+}
+
+/* Theme toggle button */
 .theme-toggle-btn {
   padding: 8px 14px;
-  margin-left: 20px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -51,8 +63,12 @@
   background: #2563eb;
   color: white;
 }
-
 .theme-toggle-btn:hover {
   opacity: 0.9;
 }
 
+/* Simple home styling (optional) */
+.home {
+  text-align: center;
+  margin-top: 40px;
+}

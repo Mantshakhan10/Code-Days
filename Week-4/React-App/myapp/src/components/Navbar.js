@@ -7,8 +7,8 @@ function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <nav className="nav">
-      <h1 className="logo">React Router Demo</h1>
+    <nav className={`nav ${theme}`}>
+      <h1 className="logo">The Mantsha</h1>
 
       <div className="links">
         <NavLink
@@ -48,7 +48,6 @@ function Navbar() {
         </NavLink>
       </div>
 
-      {/* Dark/Light Theme Toggle Button */}
       <button
         className="theme-toggle-btn"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}

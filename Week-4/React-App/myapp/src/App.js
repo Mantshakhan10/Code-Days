@@ -14,10 +14,11 @@ import { ThemeContext } from "./ThemeContext";
 import "./App.css";
 
 function App() {
-  const [theme, setTheme] = useState("light"); // theme state
+  const [theme, setTheme] = useState("light"); // "light" or "dark"
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      {/* Yahi div theme change karega */}
       <div className={`app ${theme}`}>
         <Navbar />
 
@@ -27,11 +28,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/dashboard" element={<Dashboard />} />
-
-            {/* Dynamic Route */}
             <Route path="/post/:postId" element={<PostDetail />} />
-
-            {/* 404 Page */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
