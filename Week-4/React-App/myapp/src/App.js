@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
@@ -8,26 +10,33 @@ import Dashboard from "./pages/Dashboard";
 import PostDetail from "./pages/PostDetail";
 import NotFound from "./pages/NotFound";
 
+import { ThemeContext } from "./ThemeContext";
+import "./App.css";
+
 function App() {
+  const [theme, setTheme] = useState("light"); // theme state
+
   return (
-    <>
-      <Navbar />
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`app ${theme}`}>
+        <Navbar />
 
-      <div style={{ padding: "20px" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+        <div style={{ padding: "20px" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/dashboard" element={<Dashboard />} />
 
-          {/* Dynamic route */}
-          <Route path="/post/:postId" element={<PostDetail />} />
+            {/* Dynamic Route */}
+            <Route path="/post/:postId" element={<PostDetail />} />
 
-          {/* 404 route - must be last */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            {/* 404 Page */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </div>
-    </>
+    </ThemeContext.Provider>
   );
 }
 
