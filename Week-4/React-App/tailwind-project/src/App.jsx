@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import PrimaryButton from "./components/PrimaryButton";
 import CardsGrid from "./components/CardsGrid";
 import InteractiveCard from "./components/InteractiveCard";
+import ProfessionalCards from "./components/ProfessionalCards";
+
 
 function App() {
   return (
@@ -39,8 +41,11 @@ function App() {
             Explore More
           </button>
         </div>
+        <ProfessionalCards />
+
       </main>
     </div>
+    
   );
 }
 
