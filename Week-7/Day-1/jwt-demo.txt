@@ -1,0 +1,12 @@
+Sample JWT Token:
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+.eyJpZCI6MSwibmFtZSI6IkFtYW4iLCJyb2xlIjoiYWRtaW4ifQ
+.tCHYf_8JB8x6_ucfhoJykLoR6Yx6x3ap8YDE_SkEmV8
+
+This token contains:
+- Header: algorithm & token type
+- Payload: user data
+- Signature: verification using secret key
+
+JWT ensures token integrity and prevents tampering.
